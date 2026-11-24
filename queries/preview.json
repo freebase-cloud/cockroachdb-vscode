@@ -1,0 +1,38 @@
+[
+  {
+    "phase": "create",
+    "query": "CREATE TABLE fbx_cockroachdb_000000000000000000000000 (id INTEGER PRIMARY KEY, account TEXT, balance REAL)"
+  },
+  {
+    "phase": "seed",
+    "query": "INSERT INTO fbx_cockroachdb_000000000000000000000000 (id, account, balance) VALUES (1, 'Operations', 1200)"
+  },
+  {
+    "phase": "seed",
+    "query": "INSERT INTO fbx_cockroachdb_000000000000000000000000 (id, account, balance) VALUES (2, 'Petty cash', 80)"
+  },
+  {
+    "phase": "seed",
+    "query": "INSERT INTO fbx_cockroachdb_000000000000000000000000 (id, account, balance) VALUES (3, 'Reserve', 9000)"
+  },
+  {
+    "phase": "read",
+    "query": "SELECT * FROM fbx_cockroachdb_000000000000000000000000 LIMIT 100"
+  },
+  {
+    "phase": "update",
+    "query": "UPDATE fbx_cockroachdb_000000000000000000000000 SET balance = 1210 WHERE id = 1"
+  },
+  {
+    "phase": "verify",
+    "query": "SELECT * FROM fbx_cockroachdb_000000000000000000000000 WHERE id = 1 LIMIT 100"
+  },
+  {
+    "phase": "delete",
+    "query": "DELETE FROM fbx_cockroachdb_000000000000000000000000 WHERE id = 2"
+  },
+  {
+    "phase": "cleanup",
+    "query": "DROP TABLE fbx_cockroachdb_000000000000000000000000"
+  }
+]

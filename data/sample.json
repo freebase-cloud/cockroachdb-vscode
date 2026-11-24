@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "account": "Operations",
+    "balance": 1200
+  },
+  {
+    "id": 2,
+    "account": "Petty cash",
+    "balance": 80
+  },
+  {
+    "id": 3,
+    "account": "Reserve",
+    "balance": 9000
+  }
+]

@@ -1,0 +1,6 @@
+{
+  "name": "cockroachdb-vscode",
+  "engine": "cockroachdb",
+  "slug": "cockroachdb",
+  "kind": "starter"
+}
